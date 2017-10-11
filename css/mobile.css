@@ -3,22 +3,15 @@
   transition: 350ms;
 }
 
-:root {
-    --main-bg-color: yellow;
-  }
-
-html {
-  background: #222;
-}
 
   .bg-back{
   width: 50vw;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   bottom: 0;
   position: absolute;
-  z-index: -3;
+  z-index: 1;
   overflow: hidden;
 
 }
@@ -26,17 +19,16 @@ html {
 
 
 .bg {
-    background: url(https://mail.google.com/mail/u/0?ui=2&ik=3f57c64c11&attid=0.1&th=15e71aff47c12cce&view=fimg&disp=thd&attbid=ANGjdJ-3k17MV_fcfOs5JRbJz8jBtKznr2SxL4yJMk7PtCusNOqPB5mG_UUDPQYXat2Y6G8BMp473RH6o8J2fP4LQc0ucqm5OF7Iu_fBFbxnt3GdA1lBKOrTBpefVsE&ats=2524608000000) no-repeat center center;
+    background: url('img/source.gif') no-repeat center center;
     background-size: cover;
     top: 0;
     left: 0;
     width: 50vw;
     bottom: 0;
-    height: 100vh;
     position: absolute;
     mix-blend-mode: multiply;
     filter: grayscale(100%);
-    z-index: -2;
+    z-index: 1;
   }
 
 /* Slider */
@@ -119,7 +111,7 @@ html {
 {
     display: none;
     float: left;
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', monospace;
 
     min-height: 1px;
 }
@@ -283,8 +275,8 @@ html {
 {
     position: absolute;
     overflow: hidden;
-right: 1%;
-top: 4rem;
+right: 51%;
+bottom: 10px;
 z-index: 10;
 display: block;
 
@@ -339,9 +331,9 @@ ul:before {
     right: 5px;
     background: white;
     padding: 0 3px;
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', monospace;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 600;
     letter-spacing: 1px;
@@ -356,30 +348,24 @@ h3 {
 button#slick-slide-control00:after {
   content: 'About me';
   color: white;
-  font-family: 'Lato';
+  font-family: Helvetica, sans-serif;
   text-align: right;
 }
 
 button#slick-slide-control01:after {
-  content: 'Blog';
+  content: 'Work';
   color: white;
-  font-family: 'Lato';
+  font-family: Helvetica, sans-serif;
   text-align: right;
 }
 
 button#slick-slide-control02:after {
-  content: 'Work';
+  content: 'Projects';
   color: white;
-  font-family: 'Lato';
+  font-family: Helvetica, sans-serif;
   text-align: right;
 }
 
-button#slick-slide-control03:after {
-  content: 'Project details';
-  color: white;
-  font-family: 'Lato';
-  text-align: right;
-}
 
 li {
 
@@ -417,16 +403,29 @@ li.slick-active:after {
 
 h3 {
   font-size: 6rem;
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto Mono', monospace;
   font-weight: 300;
   text-transform: uppercase;
 }
 
 
-
+#intro {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  width: 25vw;
+  position: absolute;
+  padding: 5px;
+  bottom: 10px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+  color: rgba(255,255,255,.3);
+  z-index: 2;
+}
 
 #intro a {
-  color: tomato;
+  color: white;
   text-decoration: underline;
 }
 
@@ -438,36 +437,55 @@ h1 {
 }
 
 #intro h2 {
-  font-family: 'Lato';
+  font-family: Helvetica, sans-serif;
 }
 
-span {
+span:not(.contact) {
   display: block;
-    font-size: 1rem;
+    font-size: 5rem;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
-.bg h1 {color: yellow;font-size: 4em;font-family: 'Roboto Mono'; padding-left: 5px;}
+.bg-back h1 {color: yellow;font-size: 10em;font-family: 'Roboto Mono', monospace; padding-left: 5px;}
 
-.single-item {width: 50vw; font-size: 1.25rem; position: relative;}
+.single-item {width: 100vw; height: 100vh; background: #414141; font-size: 1.25rem; position: relative;}
 
 
 .slick-slide {
-height: 100vh;
+  height: 100vh;
 }
 
 .slick-slide p {
 
- padding: 1rem .5rem;
- font-size: .6rem;
- color: white;
- line-height: 1.75;
- margin-top: 65vh;
+ margin-left: 50vw;
+ height: 100vh;
+ padding: 2rem;
+ background: lightgrey;
 }
 
 
+.slick-slide:first-of-type {
+  background: #222;
+}
 
+.slick-slide:nth-child(2) {
+  background: #333;
+}
+
+.slick-slide:nth-child(3) {
+  background: #444;
+}
+
+.slick-slide:last-of-type {
+  background: #555;
+}
 
 button {background: transparent;}
+
+a.work {
+  display: block;
+  margin: .5rem 0;
+}
 
 /* Let's get this party started
 ::-webkit-scrollbar {
@@ -494,3 +512,58 @@ button {background: transparent;}
 	background:transparent !important;
 }
 */
+@media (max-width: 800px) {
+  .slick-slide p {
+   margin-left: 0vw;
+   width: auto;
+   height: auto;
+   font-size: .7rem;
+   margin: 0rem;
+  color:black;
+background: transparent !important;
+
+  position: relative;
+
+  }
+
+
+
+
+  .bg-back h1 {
+    font-size: 3rem;
+  }
+
+  span:not(.contact) {
+    font-size: 1rem;
+  }
+
+.single-item {
+  width: 100vw;
+background: rgba(255,255,0,.9) !important;
+
+}
+
+
+  .slick-slide {
+height: 50vh !important;
+background: transparent !important;
+  }
+
+
+
+  #intro {
+    display: none;
+  }
+  .bg-back, .bg{
+  width: 100%;}
+
+
+
+  .single-item {z-index: 6 !important; height: 50vh !important; margin-top: 50vh;}
+
+  .slick-dots {
+    right: 1%;
+    top: -80%;
+  }
+
+}
