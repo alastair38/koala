@@ -353,14 +353,14 @@ button#slick-slide-control00:after {
 }
 
 button#slick-slide-control01:after {
-  content: 'Blog';
+  content: 'Work';
   color: white;
   font-family: Helvetica, sans-serif;
   text-align: right;
 }
 
 button#slick-slide-control02:after {
-  content: 'Work';
+  content: 'Projects';
   color: white;
   font-family: Helvetica, sans-serif;
   text-align: right;
@@ -450,6 +450,7 @@ span {
   display: block;
     font-size: 5rem;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 .bg-back h1 {color: yellow;font-size: 10em;font-family: 'Roboto Mono', monospace; padding-left: 5px;}
 
@@ -486,6 +487,11 @@ span {
 }
 
 button {background: transparent;}
+
+a.work {
+  display: block;
+  margin: .5rem 0;
+}
 
 /* Let's get this party started
 ::-webkit-scrollbar {
