@@ -442,11 +442,13 @@ h1 {
 
 span:not(.contact) {
   display: block;
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
-.bg-back h1 {color: yellow;font-size: 10em;font-family: 'Roboto Mono', monospace; padding-left: 5px;}
+#logo {position: absolute; font-size: 10rem; font-family: 'Roboto Mono'; color: yellow; top: 0; left: 5px; z-index: 6;}
+
+.bg h1 {font-size: 10em;font-family: 'Roboto Mono', monospace; padding-left: 5px;}
 
 .single-item {width: 100vw; height: 100vh; background: #414141; font-size: 1.25rem; position: relative;}
 
@@ -529,7 +531,7 @@ background: transparent !important;
 
 
 
-  .bg-back h1 {
+  #logo {
     font-size: 3rem;
   }
 
@@ -539,7 +541,7 @@ background: transparent !important;
 
 .single-item {
   width: 100vw;
-background: rgba(255,255,0,.9) !important;
+background: rgba(255,255,0,.75) !important;
 
 }
 
@@ -557,7 +559,9 @@ background: transparent !important;
   .bg-back, .bg{
   width: 100%;}
 
-
+.bg-back {
+  background: #444;
+}
 
   .single-item {z-index: 6 !important; height: 60vh !important; margin-top: 40vh;}
 
