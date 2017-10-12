@@ -271,6 +271,7 @@ article:last-of-type {
 @media (max-width: 600px) {
   #intro {
     left: 10px;
+    text-align: left;
   }
   .bg-left:after {
     display: none;
